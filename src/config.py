@@ -5,20 +5,22 @@ def get_parser():
         "PyTorch implementation of Photorealistic Style transfer from the paper"
         "High-Resolution Network for Photorealistic Style Transfer(https://arxiv.org/pdf/1904.11617v1.pdf)."
 
-        "By default to work with this project you have to place your images in src/imgs folder with"
-        "names as content1.png, style1.png and so on. There should be equal number of content"
-        "and style images. This is done so that we can do style transfer on a batch."
+        # "By default to work with this project you have to place your images in src/imgs folder with"
+        # "names as content1.png, style1.png and so on. There should be equal number of content"
+        # "and style images. This is done so that we can do style transfer on a batch."
 
-        "You also can pass the images with arguments."
+        # "You also can pass the images with arguments."
         ))
 
     # Path of images
     parser.add_argument('--img_root', type=str, default='imgs/', dest='img_root',
         help="The root directory containing all your images. This is where output will be stored.")
-    parser.add_argument('--c_img', '--content_img', type=str, default='content.png', dest='content_img',
+    parser.add_argument('--c_img', '--content_img', type=str, default='content1.png', dest='content_img',
         help="Path to the content image relative to img_root")
-    parser.add_argument('--s_img', '--style_img', type=str, default='style.png', dest='style_img',
+    parser.add_argument('--s_img', '--style_img', type=str, default='style1.png', dest='style_img',
         help="Path to the style image relative to img_root")
+    parser.add_argument('--save_dir', type=str, default='imgs/', dest='save_dir',
+        help='Directory location where to save style transfered images')
     
     # Batch training
     # parser.add_argument('--use_batch', type=bool, default=False, dest='use_batch',
@@ -31,7 +33,7 @@ def get_parser():
     parser.add_argument('--use_gpu', type=bool, default=True, dest='use_gpu',
         help='Bool: If true then use GPU else CPU')
         
-    parser.add_argument('c_size', '--content_size', type=int, default=500, dest='content_size',
+    parser.add_argument('--c_size', '--content_size', type=int, default=500, dest='content_size',
         help='Size of the content image to be used in model (must be divisible by 4')
     
     # Content and style weights

@@ -13,7 +13,7 @@ from hrnet import HRNet
 from utils import *
 from config import *
 
-def train_model(args, device):
+def train_model(args, device, cfg=cfg):
     # Load VGG19 features
     vgg = vgg19(pretrained=True).features
     vgg = vgg.to(device)
@@ -43,6 +43,7 @@ def train_model(args, device):
     content_loss_epoch = []
     style_loss_epoch = []
     total_loss_epoch = []
+    i = 0
     output_image = content_img
     content_weight = args.content_weight
     style_weight = args.style_weight
@@ -85,6 +86,9 @@ def train_model(args, device):
             print('Style loss: ', style_loss.item())
             plt.imshow(im_convert(target))
             plt.show()
+
+            # plt.savefig(f'{args.save_dir}fig{i}.png')
+            # i += 1
 
         output_image = target
 
