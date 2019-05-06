@@ -76,6 +76,8 @@ plt.savefig(f'{args.save_dir}fig{i}.png')
 i += 1
 ```
 
+If you are confused about something refer to `test_model.ipynb` where I test with different images using the above code.
+
 ## Documentation
 Most of the paper details and code description has been covered in the [blog post](https://medium.com/@kushajreal/all-you-need-for-photorealistic-style-transfer-in-pytorch-acb099667fc8).
 
