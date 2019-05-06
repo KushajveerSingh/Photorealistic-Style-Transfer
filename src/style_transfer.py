@@ -13,7 +13,7 @@ from hrnet import HRNet
 from utils import *
 from config import *
 
-def train_model(args, device, cfg=cfg):
+def train_model(args, device):
     # Load VGG19 features
     vgg = vgg19(pretrained=True).features
     vgg = vgg.to(device)
