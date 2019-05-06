@@ -99,6 +99,7 @@ for epoch in range(cfg['steps']+1):
 For CUDA and CUDNN refer to [pytorch](https://pytorch.org/) install guide.
 
 ## TODO
+- [ ] Add example section with values of weights
 - [ ] Add video support
 - [ ] Batch training
 - [ ] Fastai conversion
