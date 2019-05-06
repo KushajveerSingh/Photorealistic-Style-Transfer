@@ -1,5 +1,3 @@
-[If you are seeing this then it means I am still updating my repo]
-
 # Photorealistic-Style-Transfer
 PyTorch unofficial implementation of the paper [High Resolution Network for Photorealisitc Style Transfer](https://arxiv.org/pdf/1904.11617.pdf). Check out my blog post on this ["All you need for Photorealistic Style Transfer in PyTorch"](https://medium.com/@kushajreal/all-you-need-for-photorealistic-style-transfer-in-pytorch-acb099667fc8).
 
